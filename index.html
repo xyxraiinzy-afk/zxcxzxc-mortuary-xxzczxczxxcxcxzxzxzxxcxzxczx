@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/gif" href="/assets/main-DhOJYB53.gif" />
+    <title>mortuary.lol</title>
+
+    <style>
+      /* Ensures the black screen is on top immediately */
+      #overlay {
+        position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+        background: black; z-index: 999999; display: flex;
+        justify-content: center; align-items: center;
+      }
+      /* Ensures content is hidden immediately */
+      .card { opacity: 0; visibility: hidden; }
+    </style>
+
+    <script type="module" crossorigin src="/assets/index-Dn_lvTLC.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Dk5lQQok.css">
+  </head>
+  <body style="background-color: #000;">
+    
+    <div id="cursor"></div>
+
+    <div id="overlay">
+      <span>click to enter</span>
+    </div>
+
+    <div class="card" id="centerCard">
+      
+      <canvas id="card-bg"></canvas>
+
+      <div class="top-section">
+        <div class="main-pfp-wrapper">
+          <img id="main-pfp" src="/assets/pfp-Bxf1BOOY.png" alt="main profile" />
+        </div>
+        <div class="profile-header">
+          <h1 id="main-title">mortuary</h1>
+          <div id="typewriter-text"></div>
+        </div>
+      </div>
+
+      <div class="status-box">
+        <div class="discord-pfp-wrapper">
+          <img id="discord-pfp" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="discord pfp" />
+          <img id="status-dot" src="data:image/png;base64,UklGRpgEAABXRUJQVlA4TIsEAAAvf8AfEOfCoI0kId37B/8+0AMykPBrg0EkSU56/8lS8IN1ZCAgnuNIkhwle+8O//3AH8yAlxbTjmzbTRtJUUxhhv0vpMNupCNm7k+AKRV6jrO8+z3mNjMX/mYPK+akrTH5dBCqkKqmmk3CrFfAoWZy4SuPgZSpmAJAWOpoSLL4OUgJgoiGL4CcRmA0CogTBEMZKQQGlhAYAIByp4xMIQCAITd6k9zxAfAItuVETVjL+ooV47zzinw0G3Z12572M7Mdr3v6PKYt7GHHf10XAID7zstbIVsA2LSN+PhuzMzMizuex8wM+f8PGUWSdc+CiP47cBtJkZKDZTwY6P5ATuJzdU1Le9/h3uzcwoa6ze4dSntLTfVzzsLvtcfjW9Gy8KUazeW49nvaPP7r2i3FADL6rspjojyd9qzEgGJUl6f0+Nm5bQHRKJ0/0+JieD0L2MqwJ0NZw34MJEYXTYK/74eoBv7SczlogdQ4ILS8tG0GcrXthZA/O1lIQN1xKqq61iwRXYWEXweZJaPKLwLqtiwpvQ6b145SSEzveEXlbmQxJKfoHSK3+5klqPotGjcTIVH1Bokf0yFZ/QfOcMJPM8cYvNWQtOrwHe1b4rpAf29GstTRkVcYHYshecVhP/YlY6DXQf7qtoyFrsX/6A+MiVJVlK6MC9pVtJS1Zmz0YiWxlx1jpL4UoS3jhLYVKeDTlLCjldyMpjQuXzOIfuXiymh3c2P9uYl69+hqRL9rA1/XriLulOWhpqsvWjnkyoaWcSfEv1/VLfdRD3my5VteSGudRL14+2Wf0xARh45qyr2wWmOYxy+fg/eeTZ3lQNUyvLfP2xUiFksn9zlYPVlCe7v4jOGAxMxvR9EkIDn8WaPOOtJiY9c5kjqGtJT8/Ein4jz7HxxN7Uc6EfnYoraNc5S9lTmilb04D3l6z2nEGUZ9ulfiDEZ5T0/AYOwhR1bHDMOe962pKyg7unZ0VTBYeXzjH8b40u+cQFvCGJXc3bswFjrJSTzBWKbrjV0Epu5pUENg192/lxBuz1lOpBpCHeR77rURzpGTaQhXtNb9GOHgauhQhEt6nPs4nMlyOnQSjvjzFnwrLTmhomDmn6sjmOVvlJjAP1NaA2fISRWEzzT81mgTLQY/K2mHX5krWgR+V9v74P9Nz7TIHJi+QzCjTqyB0T0w3dQYmL1ZMM3UNIPROfCSjdSoQZlbAFNPjYBZ2AD/M59TYyUoyh/+I/wX4b8h/r977H/3R/vArCb/v8f/f59/uYd/uY9/uRej3N9KiWKU+9Ou91Rg1Hv41/v413v51/vZt3vwb/fh3+7Fv92Pfbsn/3bf/0W7t3caz3Z/E/79Huz7ffj3e7Hv90ux37MCud+Tf78v/37vrxzA7/ef+7zff46g359/3AP7uA/+cS/s437Yxz3xj/tiH/fGPu6Pfdwj/7hP9nGv7ON+2cc9s4/7Zh/3zj7un33eA/u8D+55L+zzftjnPXHP++Kf90bq5QB93h/3vEf2eZ/M81655/1yz3tmnvedft77fNG893mavPdE8v5HCfP+HQA=" alt="status" />
+        </div>
+        <div class="discord-info">
+          <div class="discord-name-row">
+            <span id="discord-username">loading...</span>
+          </div>
+          <div class="discord-activity-row">
+            <span id="discord-status-text">Connecting...</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="social-links">
+        <a class="hover-link" style="pointer-events: none;">
+          <img src="/assets/wing_left-B9R-zZom.png" alt="wing" />
+        </a>
+
+        <a href="https://discord.com" target="_blank" class="hover-link">
+          <img src="/assets/discord-CrSdhsmA.png" alt="discord" />
+        </a>
+        <a href="https://instagram.com" target="_blank" class="hover-link">
+          <img src="/assets/instagram-CPCooFlr.png" alt="instagram" />
+        </a>
+        <a href="https://spotify.com" target="_blank" class="hover-link">
+          <img src="/assets/spotify-D84xp5Nu.png" alt="spotify" />
+        </a> 
+
+        <a class="hover-link" style="pointer-events: none;">
+          <img src="/assets/wing_right-DTo6hVlN.png" alt="wing" />
+        </a>
+      </div>
+
+      <div class="footer">
+        <span id="clock">00:00:00 PM</span>
+      </div>
+
+      <img id="corner-image" src="/assets/anime3-C0F4i0ao.png" alt="decor" />
+
+    </div>
+
+    <audio id="audio" src="/assets/Sound-HV0WNmw4.mp3" loop></audio>
+  </body>
+</html>
